@@ -6,7 +6,7 @@ namespace LightningFastWordFinder
 {
     class Program
     {
-        static string name = "YOUR NAME";
+        static string name = "Richter";
         static int numOfRuns = 1000;
 
         static double RunParserPerformanceTests(string text)
@@ -19,9 +19,11 @@ namespace LightningFastWordFinder
                 LightningWordFinder parser = new LightningWordFinder();
                 longestWord = parser.GetLongestWord(text);
 
-                if (longestWord != "Constantinopolitan")
+                if (!longestWord.Equals("Constantinopolitan"))
                 {
+                    Console.WriteLine("Constantinopolitan".Length + " " + longestWord.Length);
                     Console.WriteLine("The longest word is not what I wanted to see..");
+                    Console.WriteLine(longestWord);
                     Thread.Sleep(20);
                 }
             }
